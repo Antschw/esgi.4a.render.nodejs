@@ -3,7 +3,7 @@ const { Sequelize } = require('sequelize');
 
 // Database
 const sequelize = new Sequelize(
-  `postgres://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@${process.env.DB_HOST}:${process.env.DB_PORT}/${process.env.DB_NAME}`,
+  `postgresql://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@${process.env.DB_HOSTNAME}/${process.env.DB_NAME}`,
   {
     dialect: 'postgres',
     dialectOptions: {
