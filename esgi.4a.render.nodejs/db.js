@@ -1,8 +1,9 @@
-const { Sequelize } = require('sequelize')
+require('dotenv').config();
+const { Sequelize } = require('sequelize');
 
 // Database
 const sequelize = new Sequelize(
-  '', // TODO: database connection string
+  `postgres://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@${process.env.DB_HOST}:${process.env.DB_PORT}/${process.env.DB_NAME}`,
   {
     dialect: 'postgres',
     dialectOptions: {

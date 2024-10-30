@@ -8,6 +8,7 @@
   "dependencies": {
     "cookie-parser": "~1.4.6",
     "debug": "~4.3.4",
+    "dotenv": "^16.4.5",
     "express": "~4.18.1",
     "hbs": "~4.2.0",
     "http-errors": "~2.0.0",
@@ -16,5 +17,9 @@
     "pg": "^8.8.0",
     "pg-hstore": "^2.3.4",
     "sequelize": "^6.23.1"
-  }
+  },
+  "description": "To do this exercise, you must read carefully the given documentations and rules.",
+  "main": "app.js",
+  "author": "",
+  "license": "ISC"
 }
