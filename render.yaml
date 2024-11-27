@@ -1,14 +1,14 @@
 databases:
   - name: project-database
-    databaseName: app_database
-    user: app_user
     plan: free
     region: frankfurt
 
 services:
   - type: web
     name: nodejs-app
+    runtime: node
     plan: free
+    region: frankfurt
     buildCommand: cd esgi.4a.render.nodejs && npm install
     startCommand: cd esgi.4a.render.nodejs && npm run start
     envVars:
@@ -16,4 +16,3 @@ services:
         fromDatabase:
           name: project-database
           property: connectionString
-    runtime: node
