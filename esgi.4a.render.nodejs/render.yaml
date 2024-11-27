@@ -1,0 +1,18 @@
+databases:
+  - name: project-database
+    databaseName: app_database
+    user: app_user
+    plan: free
+    region: europe-west
+
+services:
+  - type: web
+    name: static-serverless
+    env: static
+    buildCommand: npm install
+    startCommand: npm run start
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: project-database
+          property: connectionString
