@@ -9,6 +9,7 @@ services:
   - type: web
     name: nodejs-app
     env: node
+    plan: free
     buildCommand: cd esgi.4a.render.static && npm install
     startCommand: cd esgi.4a.render.static && npm run start
     envVars:
