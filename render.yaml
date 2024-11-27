@@ -9,8 +9,8 @@ services:
   - type: web
     name: nodejs-app
     plan: free
-    buildCommand: cd esgi.4a.render.static && npm install
-    startCommand: cd esgi.4a.render.static && npm run start
+    buildCommand: cd esgi.4a.render.nodejs && npm install
+    startCommand: cd esgi.4a.render.nodejs && npm run start
     envVars:
       - key: DATABASE_URL
         fromDatabase:
