@@ -7,10 +7,10 @@ databases:
 
 services:
   - type: web
-    name: static-serverless
-    env: static
-    buildCommand: npm install
-    startCommand: npm run start
+    name: nodejs-app
+    env: node
+    buildCommand: cd esgi.4a.render.static && npm install
+    startCommand: cd esgi.4a.render.static && npm run start
     envVars:
       - key: DATABASE_URL
         fromDatabase:
